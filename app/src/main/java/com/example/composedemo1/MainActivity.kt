@@ -25,6 +25,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Column(
                 modifier = Modifier.background(color = Color.LightGray )
+                    .fillMaxSize()
             ){
                 Greeting("AB")
                 Greeting("CDEF")
