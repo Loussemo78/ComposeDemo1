@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
             Column(
                 modifier = Modifier.background(color = Color.LightGray )
                     .fillMaxSize(),
-                horizontalAlignment = Alignment.End
+                horizontalAlignment = Alignment.CenterHorizontally
             ){
                 Greeting("AB")
                 Greeting("CDEF")
