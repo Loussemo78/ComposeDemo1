@@ -27,7 +27,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
 
-            Greeting("Android")
+            Greeting("AB")
+            Greeting("CDEF")
+            Greeting("G")
 
 
         }
@@ -46,8 +48,7 @@ fun Greeting(name: String) {
             .background(color = Color.Yellow)
             .border(2.dp, color = Color.Green)
             .padding(10.dp)
-            .fillMaxWidth(0.5f)
-            .fillMaxHeight(0.3f)
+
 
     )
 
