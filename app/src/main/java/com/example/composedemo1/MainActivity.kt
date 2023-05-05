@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
             Row(
                 modifier = Modifier.background(color = Color.LightGray )
                     .fillMaxSize(),
-                horizontalArrangement = Arrangement.Start
+                horizontalArrangement = Arrangement.Center
             ){
                 Greeting("AB")
                 Greeting("CDEF")
