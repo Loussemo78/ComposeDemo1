@@ -23,7 +23,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Column{
+            Column(
+                modifier = Modifier.background(color = Color.LightGray )
+            ){
                 Greeting("AB")
                 Greeting("CDEF")
                 Greeting("G")
