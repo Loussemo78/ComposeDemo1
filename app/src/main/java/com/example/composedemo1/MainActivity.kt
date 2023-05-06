@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -83,5 +84,21 @@ fun ButtonDemo(){
            contentDescription = "Refersh Button",
        tint = Color.DarkGray,
            modifier = Modifier.size(80.dp))
+    }
+
+    Button(onClick = {
+        Toast.makeText(context,"Clicked on Button", Toast.LENGTH_SHORT).show()
+    },
+        contentPadding = PaddingValues(16.dp),
+        border = BorderStroke(10.dp,Color.Black),
+        colors = ButtonDefaults.textButtonColors(
+            backgroundColor = Color.DarkGray,
+            contentColor = Color.White
+
+        )
+    ) {
+        Text("Add To cart",
+        style = MaterialTheme.typography.h3,
+        modifier = Modifier.padding(5.dp))
     }
 }
