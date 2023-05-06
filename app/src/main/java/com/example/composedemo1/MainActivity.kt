@@ -9,6 +9,8 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Refresh
@@ -100,5 +102,39 @@ fun ButtonDemo(){
         Text("Add To cart",
         style = MaterialTheme.typography.h3,
         modifier = Modifier.padding(5.dp))
+    }
+
+    Button(onClick = {
+        Toast.makeText(context,"Clicked on Button", Toast.LENGTH_SHORT).show()
+    },
+        shape = CutCornerShape(10.dp),
+        contentPadding = PaddingValues(16.dp),
+        border = BorderStroke(10.dp,Color.Black),
+        colors = ButtonDefaults.textButtonColors(
+            backgroundColor = Color.DarkGray,
+            contentColor = Color.White
+
+        )
+    ) {
+        Text("Add To cart",
+            style = MaterialTheme.typography.h3,
+            modifier = Modifier.padding(5.dp))
+    }
+
+    Button(onClick = {
+        Toast.makeText(context,"Clicked on Button", Toast.LENGTH_SHORT).show()
+    },
+        shape = CircleShape,
+        contentPadding = PaddingValues(16.dp),
+        border = BorderStroke(10.dp,Color.Black),
+        colors = ButtonDefaults.textButtonColors(
+            backgroundColor = Color.DarkGray,
+            contentColor = Color.White
+
+        )
+    ) {
+        Text("Add To cart",
+            style = MaterialTheme.typography.h3,
+            modifier = Modifier.padding(5.dp))
     }
 }
