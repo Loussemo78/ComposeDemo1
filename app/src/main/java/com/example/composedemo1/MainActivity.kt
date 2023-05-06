@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            BoxExample1()
+            BoxExample2()
         }
     }
 
@@ -55,6 +55,98 @@ fun BoxExample1() {
         )
     }
 }
+@Composable
+fun BoxExample2(){
+    Box(
+        modifier = Modifier
+            .background(color = Color.LightGray)
+            .fillMaxSize()
+    ){
+
+        Text(
+            style = MaterialTheme.typography.h5,
+            modifier = Modifier
+                .background(Color.Yellow)
+                .padding(10.dp)
+                .align(Alignment.TopStart),
+            text = "TopStart"
+        )
+        Text(
+            style = MaterialTheme.typography.h5,
+            modifier = Modifier
+                .background(Color.Yellow)
+                .padding(10.dp)
+                .align(Alignment.TopCenter),
+            text = "TopCenter"
+        )
+
+        Text(
+            style = MaterialTheme.typography.h5,
+            modifier = Modifier
+                .background(Color.Yellow)
+                .padding(10.dp)
+                .align(Alignment.TopEnd),
+            text = "TopEnd"
+        )
+
+        Text(
+            style = MaterialTheme.typography.h5,
+            modifier = Modifier
+                .background(Color.Yellow)
+                .padding(10.dp)
+                .align(Alignment.CenterStart),
+            text = "CenterStart"
+        )
+        Text(
+            style = MaterialTheme.typography.h5,
+            modifier = Modifier
+                .background(Color.Yellow)
+                .padding(10.dp)
+                .align(Alignment.Center),
+            text = "Center"
+        )
+
+        Text(
+            style = MaterialTheme.typography.h5,
+            modifier = Modifier
+                .background(Color.Yellow)
+                .padding(10.dp)
+                .align(Alignment.CenterEnd),
+            text = "CenterEnd"
+        )
+        Text(
+                style = MaterialTheme.typography.h5,
+        modifier = Modifier
+            .background(Color.Yellow)
+            .padding(10.dp)
+            .align(Alignment.BottomStart),
+        text = "BottomStart"
+        )
+
+        Text(
+            style = MaterialTheme.typography.h5,
+            modifier = Modifier
+                .background(Color.Yellow)
+                .padding(10.dp)
+                .align(Alignment.BottomCenter),
+            text = "BottomCenter"
+        )
+        Text(
+            style = MaterialTheme.typography.h5,
+            modifier = Modifier
+                .background(Color.Yellow)
+                .padding(10.dp)
+                .align(Alignment.BottomEnd),
+            text = "BottomEnd"
+        )
+
+
+    }
+
+}
+
+
+
 
 
 
