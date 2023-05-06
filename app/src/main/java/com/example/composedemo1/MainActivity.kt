@@ -9,6 +9,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -66,5 +68,20 @@ fun ButtonDemo(){
         Toast.makeText(context,"Clicked on OutlineButton", Toast.LENGTH_SHORT).show()
     }) {
         Text("Add To cart")
+    }
+    
+    IconButton(onClick = {
+        Toast.makeText(context,
+            "Clicked on Icon Button"
+            ,
+            Toast.LENGTH_SHORT
+        ).show()
+
+    }) {
+       Icon(
+           Icons.Filled.Refresh ,
+           contentDescription = "Refersh Button",
+       tint = Color.DarkGray,
+           modifier = Modifier.size(80.dp))
     }
 }
