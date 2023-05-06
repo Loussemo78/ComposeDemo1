@@ -56,4 +56,15 @@ fun ButtonDemo(){
     ) {
         Text("Add To cart")
     }
+
+    TextButton(onClick = {
+        Toast.makeText(context,"Clicked on TextButton", Toast.LENGTH_SHORT).show()
+    }) {
+        Text("Add To cart")
+    }
+    OutlinedButton(onClick = {
+        Toast.makeText(context,"Clicked on OutlineButton", Toast.LENGTH_SHORT).show()
+    }) {
+        Text("Add To cart")
+    }
 }
