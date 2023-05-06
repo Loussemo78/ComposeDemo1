@@ -24,46 +24,37 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Row(
-                modifier = Modifier.background(color = Color.LightGray )
-                    .fillMaxSize(),
-                verticalAlignment = Alignment.Bottom,
-                horizontalArrangement = Arrangement.SpaceEvenly
-
-            ){
-                Greeting("AB")
-                Greeting("CDEF")
-                Greeting("G")
-            }
-
-
-
+            BoxExample1()
         }
     }
 
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = name,
-    fontSize = 32.sp,
-    fontWeight = FontWeight.Bold,
-        color = Color.Red,
-        textAlign = TextAlign.Center,
+fun BoxExample1() {
+    Box(
         modifier = Modifier
-            .background(color = Color.Yellow)
-            .border(2.dp, color = Color.Green)
-            .padding(10.dp)
+            .background(color = Color.Green)
+            .size(180.dp, 300.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .background(color = Color.Yellow)
+                .size(125.dp, 100.dp)
+                .align(Alignment.TopEnd)
+        ) {
 
-
-    )
-
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    ComposeDemo1Theme {
-        Greeting("Android")
+        }
+        Text(
+            text = "Hi",
+            style = MaterialTheme.typography.h3,
+            modifier = Modifier
+                .background(color = Color.White)
+                .size(90.dp, 50.dp)
+                .align(Alignment.BottomCenter)
+        )
     }
 }
+
+
+
